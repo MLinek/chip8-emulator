@@ -33,6 +33,6 @@ describe("StackService", () => {
     });
 
     it("integrity text", () => {
-        stack.put()
+        stack.put();
     });
 });

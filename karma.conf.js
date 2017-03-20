@@ -5,21 +5,21 @@ module.exports = function (config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '',
+        basePath: "",
 
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['browserify', 'jasmine'],
+        frameworks: ["browserify", "jasmine"],
 
 
         // list of files / patterns to load in the browser
         files: [
-            'node_modules/babel-polyfill/browser.js',
-            'node_modules/angular/angular.min.js',
-            'node_modules/angular-mocks/angular-mocks.js',
-            'src/js/main.js',
-            'tests/**/*Spec.js'
+            "node_modules/babel-polyfill/browser.js",
+            "node_modules/angular/angular.min.js",
+            "node_modules/angular-mocks/angular-mocks.js",
+            "src/js/main.js",
+            "tests/**/*Spec.js"
         ],
 
 
@@ -30,13 +30,13 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'src/js/**/*.js': ['browserify', 'coverage'],
-            'tests/**/*Spec.js': ['browserify']
+            "src/js/**/*.js": ["browserify", "coverage"],
+            "tests/**/*Spec.js": ["browserify"]
         },
 
 
         browserify: {
-            paths: ['./node_modules', './src/js'],
+            paths: ["./node_modules", "./src/js"],
             debug: true,
             transform: [
                 ["babelify", {"presets": ["es2015"]}]
@@ -47,7 +47,7 @@ module.exports = function (config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['dots'],
+        reporters: ["dots"],
 
 
         // web server port
@@ -69,16 +69,16 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome', 'Firefox'],
+        browsers: ["Chrome", "Firefox"],
 
         customLaunchers: {
             IE10: {
-                base: 'IE',
-                'x-ua-compatible': 'IE=EmulateIE10'
+                base: "IE",
+                "x-ua-compatible": "IE=EmulateIE10"
             },
             IE9: {
-                base: 'IE',
-                'x-ua-compatible': 'IE=EmulateIE9'
+                base: "IE",
+                "x-ua-compatible": "IE=EmulateIE9"
             }
         },
 
@@ -89,5 +89,5 @@ module.exports = function (config) {
         // Concurrency level
         // how many browser should be started simultaneous
         concurrency: Infinity
-    })
+    });
 };
