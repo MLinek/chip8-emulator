@@ -1,0 +1,109 @@
+* {
+  color: white;
+}
+
+body, html {
+  background: #000;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  height: 37px;
+  margin: 0;
+  padding: 10px 0 0 10px;
+}
+
+input {
+  background: none;
+  border: 0;
+}
+
+game-runner {
+  display: block;
+  margin-top: -282px;
+  position: relative;
+  top: 50%;
+  text-align: center;
+
+  #computer-container {
+    min-width: 516px;
+    margin: 0 auto;
+    background: black;
+    text-align: left;
+    display: inline-block;
+
+    & .computer-component {
+      border: 2px solid #4acc50;
+    }
+  }
+
+}
+
+#game-title {
+  width: 100%;
+  position: relative;
+
+  .settings {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+  }
+}
+
+#emulator-buttons {
+  button,
+  .button {
+    height: 50px;
+    width: 140px;
+    margin-bottom: 7px;
+  }
+}
+
+button, .button {
+  display: inline-block;
+  margin-right: 8px;
+  background: none;
+  border: 2px solid #24ce68;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#roam-select {
+  display: none;
+}
+
+#side-panel {
+  width: 300px;
+  h2 {
+    border-bottom: 2px solid #4acc50;
+  }
+}
+
+.data-table {
+  width: 80px;
+
+  * {
+    text-align: center;
+  }
+
+  td {
+    height: 30px;
+    width: 30px;
+    background: #1d1d1d;
+  }
+}
+
+.cpu-internals {
+
+}
+
+@import "generic_classes";
+@import "screen";
+@import "keyboard";

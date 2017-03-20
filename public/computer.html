@@ -1,0 +1,34 @@
+<div id="computer-container">
+    <div class="clearfix">
+        <div class="pull-left computer-component">
+            <div id="game-title">
+                <h2 ng-bind="title"></h2>
+                <button class="fa fa-cog settings" ng-click="sidePanel.settings()"></button>
+            </div>
+            <screen></screen>
+            <div id="keyboard" class="clearfix">
+                <div>
+                    <div id="keypad" class="pull-left" data-keypad></div>
+                    <div id="emulator-buttons" class="pull-left">
+                        <div load-roam>
+                            <button>LOAD ROAM</button>
+                            <input type="file" class="button" id="roam-select"/>
+                        </div>
+                        <div>
+                            <button ng-click="reset()">RESET</button>
+                        </div>
+                        <div>
+                            <button ng-click="softReset()">SOFT RESET</button>
+                        </div>
+                        <div>
+                            <button ng-click="debug()">DEBUG</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pull-left computer-component" ng-hide="sidePanel.isHidden()">
+            <div data-side-panel></div>
+        </div>
+    </div>
+</div>

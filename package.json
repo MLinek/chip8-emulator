@@ -1,0 +1,36 @@
+{
+  "name": "chip8",
+  "version": "1.0.0",
+  "description": "Chip8 emulator.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "Mariusz Linkiewicz",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.5.9",
+    "angular-mocks": "^1.6.2",
+    "angular-route": "^1.6.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "del": "^2.2.2",
+    "eslint": "^3.17.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  }
+}

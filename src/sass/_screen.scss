@@ -1,0 +1,22 @@
+
+#screen canvas {
+  height: 256px;
+  width: 512px;
+  background: black;
+  border: 2px solid #24ce68;
+}
+
+.pixels-row {
+  height: 5px;
+}
+
+.pixel {
+  height: 5px;
+  width: 5px;
+  background: black;
+  float: left;
+}
+
+.pixel[data-value="1"] {
+  background: white;
+}

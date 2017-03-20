@@ -1,0 +1,116 @@
+<div id="side-panel">
+    <div ng-show="sidePanel.isShowingSettings()">
+        <h2>Settings</h2>
+        <div>
+            <table>
+                <tr>
+                    <td>Restrict speed</td>
+                    <td>
+                        <input type="checkbox" ng-model="settings.restrictSpeed">
+                    </td>
+                </tr>
+                <tr ng-show="settings.restrictSpeed">
+                    <td>
+                        <span>Instr/Sec</span>
+                    </td>
+                    <td>
+                        <input type="text" ng-model="settings.instructionsPerSecond">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sound</td>
+                    <td>
+                        <input type="checkbox" ng-model="settings.sound">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div ng-show="sidePanel.isShowingDebug()">
+        <h2>Debug</h2>
+        <div>
+            <table>
+                <tr>
+                    <td>Pause</td>
+                    <td>
+                        <input type="checkbox" ng-model="pause">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button ng-click="cpu.nextInstruction()">Next opCode</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="data-table registers pull-left">
+            <h3 class="no-padding">Registers</h3>
+            <table class="font-12">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tr ng-repeat="register in cpu.registers.registers track by $index">
+                    <td ng-bind="$index.toString(16)"></td>
+                    <td ng-bind="register.value"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="data-table pull-left text-center">
+            <h3 class="no-padding">Stack</h3>
+            <table class="font-12">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="register in cpu.stack.stack track by $index">
+                    <td ng-bind="$index.toString(16)"></td>
+                    <td ng-bind="register.value"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="data-table pull-left text-center">
+            <h3 class="no-padding">CPU</h3>
+            <table class="font-12">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>I</td>
+                    <td ng-bind="cpu.registerI.value"></td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td ng-bind="cpu.pc.value"></td>
+                </tr>
+                <tr>
+                    <td>DT</td>
+                    <td ng-bind="cpu.delayTimer.value"></td>
+                </tr>
+                <tr>
+                    <td>ST</td>
+                    <td ng-bind="cpu.soundTimer.value"></td>
+                </tr>
+                <tr>
+                    <td>opCode</td>
+                    <td ng-bind="cpu.opCode.value"></td>
+                </tr>
+                <tr>
+                    <td>Next opCode</td>
+                    <td ng-bind="cpu.nextOpCode.value"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
