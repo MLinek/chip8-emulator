@@ -79,7 +79,7 @@ export default class Hex {
         let carry = false;
 
         if (isRegister) {
-            carry = decimalValue > decimalAddedValue;
+            carry = decimalValue >= decimalAddedValue;
             if (result < 0) {
                 result += 256;
             }
